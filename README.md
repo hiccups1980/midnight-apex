@@ -1,51 +1,65 @@
 # Midnight Apex
 
-Ein kleines 3D-Arcade-Rennspiel im Browser, inspiriert von der schnellen, farbenfrohen Rennspiel-Ära der 1980er. Es verwendet Three.js und Vite; Strecke, Autos und Landschaft werden direkt im Code aufgebaut.
+A little retro racing, straight in your browser.
 
-## Starten
+Midnight Apex is a small 3D arcade racing game inspired by classic Amiga racers such as Lotus. Take the wheel of the yellow car, chase your opponent around a tree-lined circuit, and finish **three laps**. Aim for a faster race time each time you play.
 
-Zum Spielen genügt die **`index.html` im Hauptverzeichnis**: Datei herunterladen und per Doppelklick im Browser öffnen. Alles ist eingebettet, einschließlich 3D-Engine und Gestaltung. Es werden weder Node.js noch ein Server oder eine Internetverbindung benötigt. Voraussetzung ist ein aktueller Browser mit WebGL 2.
+## How to play
 
-GitHub zeigt HTML-Dateien als Quellcode an. Zum Spielen die Datei wirklich herunterladen und lokal öffnen oder auf einem Webserver bereitstellen.
+You do not need to install the game or create an account.
 
-## Entwickeln
+1. Open [index.html](index.html) in this repository.
+2. Click **Download raw file** (the download arrow above the file) to save it to your computer.
+3. Find the downloaded **index.html** and double-click it. It should open in your browser. If asked which app to use, choose your browser.
+4. Click **RENNEN STARTEN** (“Start race”), wait for the countdown, and hold **↑** to accelerate!
 
-Voraussetzung: Node.js 20.19+ oder 22.12+.
+**Seeing computer code or a plain page full of text?** GitHub's file viewer is not the game. Download the latest `index.html` and open the saved file. You only need that one file, and you can play it without an internet connection.
 
-```sh
-npm install
-npm run dev
-```
+## Controls
 
-Vite zeigt danach eine lokale Adresse an (standardmäßig `http://localhost:5173`). Für einen Produktionsbuild:
+| Key | Action |
+| --- | --- |
+| **↑** or **W** | Accelerate |
+| **↓** or **S** | Brake; keep holding to reverse |
+| **← / →** or **A / D** | Steer |
+| **Space** | Handbrake |
+| **Enter** | Start the countdown |
+| **R** | Reset the race |
 
-```sh
-npm run build
-npm run preview
-```
+On small screens, on-screen buttons appear after you start: **GAS** means accelerate and **BREMSE** means brake. A computer with a keyboard is the easiest way to get started.
 
-Der Build erzeugt zusätzlich die direkt öffnungsfähige `index.html` im Hauptverzeichnis und in `dist/`. Änderungen erfolgen in `src/`; die HTML-Vorlage liegt in `src/index.html`. Nach Änderungen `npm run build` ausführen und die aktualisierte `index.html` mit hochladen.
+## Your first race
 
-## Steuerung
+- **Stay on the road.** Driving onto the grass slows you down.
+- **Ease off before tight turns.** Keeping the accelerator down all the time makes corners harder.
+- **Follow the circuit all the way around.** Cutting across the grass can make you miss a checkpoint, so your lap will not count. Drive back to the missed section or press **R** for a fresh start.
+- **Finish all three laps.** Your total race time appears at the finish. Your best race time is saved in the same browser when saving is allowed.
 
-- **↑ / W:** Beschleunigen
-- **↓ / S:** Bremsen und rückwärts fahren
-- **← / A** und **→ / D:** Lenken
-- **Leertaste:** Handbremse
-- **R:** Rennen neu starten
-- **Enter:** Countdown starten
+The game pauses when you switch away from its window. Return to continue driving. Click the music-note button in the top-right corner to turn the simple race sounds on or off.
 
-Drei Runden fahren, die Bestzeit bleibt lokal im Browser gespeichert. Über das Notensymbol oben rechts lässt sich der einfache Start-/Countdown-Sound aktivieren.
+## What do the labels mean?
 
-Auf kleinen Bildschirmen erscheinen nach dem Start Touch-Tasten für Gas, Bremse und Lenkung. Beim Verlassen des Browserfensters pausiert das Rennen. Kontrollpunkte müssen in Reihenfolge auf der Strecke passiert werden; nach einem verpassten Kontrollpunkt zurückfahren oder das Rennen mit **R** neu starten.
+The game's menus are currently in German. Here are the main labels:
 
-## Prüfungen
+| In the game | Meaning |
+| --- | --- |
+| **RENNEN STARTEN** | Start race |
+| **LOS!** | Go! |
+| **RUNDE** | Lap |
+| **POSITION** | Your race position |
+| **ZEIT** | Current race time |
+| **BESTE** | Best race time |
+| **ZIEL ERREICHT** | Race finished |
+| **NOCH EINE RUNDE** | Reset for another race |
 
-```sh
-npm test
-npm run build
-```
+## Before you start
 
-Die Logiktests benötigen Node.js 22.18 oder neuer (empfohlen: Node.js 24). Sie prüfen Ausrollen, Bremsen, Geschwindigkeitsgrenzen, Fahrzeugausrichtung, Zeitformatierung, gespeicherte Bestzeiten und die Rundenzählung.
+This is an early, playable prototype with one circuit and one opponent. Cars and trees do not have collisions yet, so you can pass through them.
 
-Der Prototyp hat noch keine Fahrzeug- oder Baumkollisionen. Die Bestzeit wird bei gesperrtem Browserspeicher nur für die aktuelle Sitzung gehalten.
+Use an up-to-date browser such as Chrome, Edge, Firefox, or Safari. Not every device can display the 3D graphics. If you see a graphics warning or an empty screen, try another current browser or device. On phones and tablets, opening downloaded HTML files also depends on the device and file-opening app.
+
+If your browser blocks saving, you can still race; your best time will simply be forgotten when you close the game.
+
+---
+
+Want to work on the game? The development instructions are in [readme-dev.md](readme-dev.md).
