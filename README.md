@@ -4,6 +4,12 @@ Ein kleines 3D-Arcade-Rennspiel im Browser, inspiriert von der schnellen, farben
 
 ## Starten
 
+Zum Spielen genügt die **`index.html` im Hauptverzeichnis**: Datei herunterladen und per Doppelklick im Browser öffnen. Alles ist eingebettet, einschließlich 3D-Engine und Gestaltung. Es werden weder Node.js noch ein Server oder eine Internetverbindung benötigt. Voraussetzung ist ein aktueller Browser mit WebGL 2.
+
+GitHub zeigt HTML-Dateien als Quellcode an. Zum Spielen die Datei wirklich herunterladen und lokal öffnen oder auf einem Webserver bereitstellen.
+
+## Entwickeln
+
 Voraussetzung: Node.js 20.19+ oder 22.12+.
 
 ```sh
@@ -17,6 +23,8 @@ Vite zeigt danach eine lokale Adresse an (standardmäßig `http://localhost:5173
 npm run build
 npm run preview
 ```
+
+Der Build erzeugt zusätzlich die direkt öffnungsfähige `index.html` im Hauptverzeichnis und in `dist/`. Änderungen erfolgen in `src/`; die HTML-Vorlage liegt in `src/index.html`. Nach Änderungen `npm run build` ausführen und die aktualisierte `index.html` mit hochladen.
 
 ## Steuerung
 

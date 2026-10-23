@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101918" />
+    <meta name="description" content="Ein nostalgisches 3D-Arcade-Rennspiel im Browser." />
+    <title>Midnight Apex — Arcade Racing</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="vignette"></div>
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Midnight Apex Startseite"><span class="brand-mark">M</span><span>MIDNIGHT<span class="brand-light">APEX</span></span></a>
+        <div class="event-label"><span class="live-dot"></span> CLUB RACING <span class="event-divider">/</span> KÜSTENKLASSIKER</div>
+        <button id="sound-toggle" class="icon-button" aria-label="Sound umschalten" title="Sound umschalten">♫ <span>TON</span></button>
+      </header>
+
+      <main class="race-ui">
+        <section class="race-heading" aria-label="Rennen">
+          <div class="eyebrow">SOMMERPOKAL · LAUF 01</div>
+          <h1>Küsten<span>kurs</span></h1>
+          <div class="track-meta"><span>◈</span> PORTO AZZURRO <i></i> ARCADE-KURS</div>
+        </section>
+
+        <section class="position-card" aria-live="polite">
+          <div class="position-number"><span id="position">2</span><small> / 2</small></div>
+          <div class="position-copy"><b>POSITION</b><span id="race-state">BEREIT ZUM START</span></div>
+          <div class="position-divider"></div>
+          <div class="lap-copy"><b>RUNDE</b><span><strong id="lap">01</strong><em> / 03</em></span></div>
+        </section>
+
+        <div class="race-message" id="race-message"><span class="message-line"></span><span id="message-text">BEREIT?</span><span class="message-line"></span></div>
+
+        <section class="speed-cluster" aria-label="Geschwindigkeit und Zeit">
+          <div class="speedometer"><div class="speed-value" id="speed">000</div><div class="speed-unit">KM/H</div></div>
+          <div class="speed-rule"><span id="speed-bar"></span></div>
+          <div class="timing"><div><span>ZEIT</span><b id="time">00:00.00</b></div><div><span>BESTE</span><b id="best">—:—.—</b></div></div>
+        </section>
+
+        <div class="controls-hint" id="controls-hint"><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd><span>FAHREN</span><i></i><kbd>SPACE</kbd><span>HANDBREMSE</span></div>
+
+        <button id="start-button" class="start-button"><span>RENNEN STARTEN</span><b>↗</b></button>
+        <div class="touch-controls" aria-label="Touch-Steuerung"><div><button data-key="arrowleft" aria-label="Links lenken">←</button><button data-key="arrowright" aria-label="Rechts lenken">→</button></div><div><button data-key="arrowdown" aria-label="Bremsen">BREMSE</button><button data-key="arrowup" aria-label="Beschleunigen">GAS</button></div></div>
+        <button id="restart-button" class="restart-button" aria-label="Rennen neu starten">↻</button>
+        <div class="finish-banner" id="finish-banner"><span>ZIEL ERREICHT</span><b id="finish-time">00:00.00</b><button id="again-button">NOCH EINE RUNDE ↗</button></div>
+      </main>
+
+      <footer class="bottom-bar"><span><i class="status-light"></i> <span id="footer-state">RENNEN BEREIT</span></span><span>WEBGL <b>·</b> 3D ARCADE</span><span class="credit">AUTOMOBILISTA CLUB <b>© 1987 — 2026</b></span></footer>
+    </div>
+    <script type="module" src="/main.ts"></script>
+  </body>
+</html>
